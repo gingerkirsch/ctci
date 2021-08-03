@@ -12,8 +12,8 @@ def stringCompression(input):						# time O(N) | space O(N)
     for char in input:
         if (char != current_char):
             if (count != 0):
-                compressed += current_char
-                compressed += str(count)
+                compressed.append(current_char)
+                compressed.append(str(count))
             current_char = char
             count = 1
         else:
